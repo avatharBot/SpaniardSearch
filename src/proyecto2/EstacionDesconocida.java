@@ -5,7 +5,6 @@ public class EstacionDesconocida extends Exception {
     /**
      *
      */
-    private static final long serialVersionUID = 1L;
 
     private String faltante;
 
@@ -13,8 +12,8 @@ public class EstacionDesconocida extends Exception {
         this.faltante = nombre;
     }
 
+    @Override
     public String toString() {
         return "No existe la estacion " + this.faltante;
     }
-
 }

@@ -132,5 +132,4 @@ public class Red {
         }
         return resultado;
     }
-
 }

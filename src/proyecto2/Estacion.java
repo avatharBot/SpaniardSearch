@@ -33,9 +33,9 @@ public class Estacion {
 
     public void mancha(Estacion desde, int distancia) {
         if (distancia < this.distancia) {
-            if (this.desde != null){
-                System.out.println("[fine]: " + this + ": antes:" + this.desde + "(" + this.distancia + ")" );
-                System.out.println("[fine]: " + this + ": mejor:" + desde + "(" + distancia + ")" );
+            if (this.desde != null) {
+                System.out.println("[fine]: " + this + ": antes: " + this.desde + "(" + this.distancia + ")");
+                System.out.println("[fine]: " + this + ": mejor: " + desde + "(" + distancia + ")");
             }
             this.desde = desde;
             this.distancia = distancia;
@@ -46,18 +46,12 @@ public class Estacion {
         this.desde = null;
     }
 
-    public String aString() {
-        return this.nombre + ":" + this.enlaces;
-    }
+    @Override
+    public String toString() { return this.nombre; }
 
-    public String toString() {
-        return this.nombre;
-
-    }
-
+    @Override
     public boolean equals(Object o) {
         return o instanceof Estacion
                 && ((Estacion) o).nombre.equals(this.nombre);
     }
-
 }
